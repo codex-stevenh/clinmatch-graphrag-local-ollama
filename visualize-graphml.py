@@ -3,7 +3,7 @@ import plotly.graph_objects as go
 import numpy as np
 
 # Load the GraphML file
-graph = nx.read_graphml('output/20240708-161630/artifacts/summarized_graph.graphml')
+graph = nx.read_graphml('./ragtest/output/20250103-173117/artifacts/summarized_graph.graphml')
 
 # Create a 3D spring layout with more separation
 pos = nx.spring_layout(graph, dim=3, seed=42, k=0.5)
@@ -86,3 +86,4 @@ fig.update_layout(
 
 # Show the plot
 fig.show()
+# fig.write_image("summarized_graph.png")

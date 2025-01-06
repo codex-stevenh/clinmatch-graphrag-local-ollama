@@ -75,7 +75,7 @@ Follow these steps to set up this repository and use GraphRag with local models 
     
 9. **Initialize the ./ragtest folder to create the required files:**
     ```bash
-    python -m graphrag.index --init --root ./ragtest
+    python3 -m graphrag.index --init --root ./ragtest
     ```
 
 10. **Move the settings.yaml file, this is the main predefined config file configured with ollama local models :**
@@ -91,12 +91,12 @@ Users can experiment by changing the models. The llm model expects language mode
 
 11. **Run the indexing, which creates a graph:**
     ```bash
-    python -m graphrag.index --root ./ragtest
+    python3 -m graphrag.index --root ./ragtest
     ```
 
 12. **Run a query: Only supports Global method** 
     ```bash
-    python -m graphrag.query --root ./ragtest --method global "What is machine learning?"
+    python3 -m graphrag.query --root ./ragtest --method global "What is machine learning?"
     ```
 
 **Graphs can be saved which further can be used for visualization by changing the graphml to "true" in the settings.yaml :**
@@ -113,7 +113,7 @@ Pass the path to the .graphml file to the below line in visualize-graphml.py:
 13. **Visualize .graphml :**
 
     ```bash
-    python visualize-graphml.py
+    python3 visualize-graphml.py
     ```
 
 

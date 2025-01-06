@@ -73,11 +73,13 @@ def cluster_graph(
 
     # Go through each of the rows
     graph_level_pairs_column: list[list[tuple[int, str]]] = []
+    # graph_level_pairs_column: list[list[list[int, str]]] = []
     for _, row in progress_iterable(
         output_df.iterrows(), callbacks.progress, num_total
     ):
         levels = row[level_to]
         graph_level_pairs: list[tuple[int, str]] = []
+        # graph_level_pairs: list[list[int, str]] = []
 
         # For each of the levels, get the graph and add it to the list
         for level in levels:
@@ -91,6 +93,7 @@ def cluster_graph(
                 )
             )
             graph_level_pairs.append((level, graph))
+            # graph_level_pairs.append([level, graph])
         graph_level_pairs_column.append(graph_level_pairs)
     output_df[to] = graph_level_pairs_column
 
